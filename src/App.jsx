@@ -5,8 +5,8 @@ export default class App extends Component {
   state = {
     persons: [
       { name: "Tayo", age: 60 },
-      { name: "Tayo", age: 60 },
-      { name: "Tayo", age: 60 },
+      { name: "Bayo", age: 30 },
+      { name: "Lola", age: 20 },
     ],
   };
 
@@ -14,8 +14,8 @@ export default class App extends Component {
     this.setState({
       persons: [
         { name: "Bola", age: 60 },
-        { name: event.target.value, age: 60 },
-        { name: "Omotayo", age: 60 },
+        { name: event.target.value, age: 30 },
+        { name: "Kudi", age: 20 },
       ],
     });
   };
@@ -23,23 +23,27 @@ export default class App extends Component {
     return (
       <div className="App">
         <h1>my Class</h1>
-        <button onClick={this.switchNameHandler.bind(this, "John")}>
-          Click Me
-        </button>
-        <practice
+
+        <Practice
           name={this.state.persons[0].name}
           age={this.state.persons[0].age}
-          ></practice>
-        <practice
+          ></Practice>
+
+        <Practice
           change = {this.switchNameHandler}
           name={this.state.persons[1].name}
           age={this.state.persons[1].age}
-        ></practice>
-        <practice
-        mreazi = {() =>this.switchNameHandler("Dayo")}
+        ></Practice>
+        
+        <Practice
+        click = {() => this.switchNameHandler("Dayo")}
           name={this.state.persons[2].name}
           age={this.state.persons[2].age}
-        ></practice>
+        ></Practice>
+
+        <button onClick={this.switchNameHandler.bind(this, "John")}>
+          Next
+        </button>
       </div>
     );
   }

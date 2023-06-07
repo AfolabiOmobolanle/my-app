@@ -4,10 +4,10 @@ export  const Practice = (prop) => {
   return (
     <div>
 
-        <h1 onClick={prop.mreazi}>
+        <h1 onClick={prop.click}>
             my name is {prop.name} and i am {prop.age} years old
         </h1>
-        <input onChange= {prop.change} value={prop.name} type="text" />
+        <input onChange= {prop.change} type="text" />
     </div>
   );
 }
